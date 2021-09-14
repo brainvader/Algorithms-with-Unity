@@ -15,25 +15,18 @@ public class MaxElement : MonoBehaviour {
     }
 
     /// <summary>
-    /// Compare two labels with thier values
-    /// </summary>
-    /// <param name="label1">label 1</param>
-    /// <param name="label2">label 2</param>
-    /// <returns>Label with a larger value</returns>
-    private TextMeshPro Max(TextMeshPro label1, TextMeshPro label2) {
-        return int.Parse(label1.text) > int.Parse(label2.text) ? label1 : label2;
-    }
-
-    /// <summary>
     /// Find maximum of three labels
     /// </summary>
     /// <param name="labels">three labels</param>
     /// <returns>Label with the largest value</returns>
     private TextMeshPro FindMax(TextMeshPro[] labels) {
-        var max = labels[0];
-        max = this.Max(max, labels[1]);
-        max = this.Max(max, labels[2]);
-        return max;
+        var values = new int[] {
+            int.Parse(labels[0].text),
+            int.Parse(labels[1].text),
+            int.Parse(labels[2].text)
+        };
+        var maxIndex = MaxThreeNumbers.Max(values);
+        return labels[maxIndex];
     }
 
     void Start() {
