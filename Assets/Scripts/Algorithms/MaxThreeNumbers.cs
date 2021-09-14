@@ -2,30 +2,16 @@
 /// Maximum of three numbers
 /// </summary>
 public class MaxThreeNumbers {
-    private int max;
-
-    private int b, c;
-
 
     /// <summary>
-    /// Take three numbers and return maximum of them
+    /// Compare three elements with their values
     /// </summary>
-    /// <param name="a">Initial maximum value</param>
-    /// <param name="b"></param>
-    /// <param name="c"></param>
-    public MaxThreeNumbers(int a, int b, int c) {
-        this.max = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    /// <summary>
-    /// Compare three numbers
-    /// </summary>
-    /// <returns>Maximum value of three numbers</returns>
-    public int Max3() {
-        this.max = this.b > this.max ? this.b : this.max;
-        this.max = this.c > this.max ? this.c : this.max;
-        return this.max;
+    /// <param name="values">array of values</param>
+    /// <returns>An element with the maximum value</returns>
+    public static int Max(int[] values) {
+        var maxIndex = 0;
+        maxIndex = values[maxIndex] > values[1] ? maxIndex : 1;
+        maxIndex = values[maxIndex] > values[2] ? maxIndex : 2;
+        return maxIndex;
     }
 }
