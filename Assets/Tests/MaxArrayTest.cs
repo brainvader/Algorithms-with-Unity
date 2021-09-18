@@ -1,7 +1,7 @@
 using NUnit.Framework;
 
 
-public class MaxArray {
+public class MaxArrayTest {
 
     [Test]
     public void ReturnMaxValueFromArray() {
