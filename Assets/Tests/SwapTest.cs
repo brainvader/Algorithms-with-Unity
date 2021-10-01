@@ -8,7 +8,7 @@ public class SwapTest {
     public void ReturnSwappedValues(int a, int b) {
         var (x, y) = Swap.SwapTuple((a, b));
 
-        Assert.That(a, Is.EqualTo(x));
-        Assert.That(b, Is.EqualTo(y));
+        Assert.That(a, Is.EqualTo(y));
+        Assert.That(b, Is.EqualTo(x));
     }
 }
